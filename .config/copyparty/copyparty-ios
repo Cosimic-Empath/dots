@@ -1,5 +1,5 @@
 # this config is intended for use on ios devices via 'a-shell'
-# see https://github.com/9001/copyparty for install and config
+# see https://github.com/9001/copyparty for install and config help
 [global]
   # name: ipadpro
   p: 80, 443, 3939  # enable http and https on these ports
