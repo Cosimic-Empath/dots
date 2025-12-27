@@ -1,2 +1,4 @@
 # dots
-configs and such
+currently includes configuration for:
+
+- copyparty
