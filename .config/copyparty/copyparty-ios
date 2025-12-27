@@ -1,0 +1,41 @@
+# this config is intended for use on ios devices via 'a-shell'
+# see https://github.com/9001/copyparty for install and config
+[global]
+  # name: ipadpro
+  p: 80, 443, 3939  # enable http and https on these ports
+  e2dsa      # enable file indexing and filesystem scanning
+  e2ts       # and enable multimedia indexing
+  ver        # show copyparty version in the controlpanel
+  qrz: 2     # enable qr-code and make it big
+  qrp: 1     # reduce qr-code padding
+  qr-fg: -1  # optimize for basic/simple terminals
+
+  # less chance of getting scrolled away
+
+  # enable these by uncommenting them:
+  # ftp: 21    # enable ftp server on port 21
+  # tftp: 69   # enable tftp server on port 69
+
+[accounts]
+   admin: password
+
+[/]
+  .
+  accs:
+    rwmda: admin
+
+[/blackhole]
+   ./blackhole
+   accs:
+     w: *
+     rwmda: admin
+   flags:
+     e2d
+     nodupe
+
+[/stash]
+   ./stash
+   accs:
+     wG: *
+  flags:
+     e2d, d2t, fk: 4
